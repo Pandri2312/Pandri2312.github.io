@@ -1,12 +1,32 @@
-.box {
+.corazon {
+  position: relative;
   width: 100px;
   height: 100px;
-}
-
-.red-box {
   background-color: red;
+  /* Rotamos el cuadro para que la punta quede hacia abajo */
+  transform: rotate(-45deg); 
+  margin: 50px auto;
 }
 
-.blue-box {
-  background-color: violet;
+/* Con ::before y ::after creamos los dos círculos de arriba */
+.corazon::before,
+.corazon::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%; /* Esto los transforma en círculos */
+}
+
+/* Movemos el primer círculo hacia arriba */
+.corazon::before {
+  top: -50px;
+  left: 0;
+}
+
+/* Movemos el segundo círculo hacia la derecha */
+.corazon::after {
+  top: 0;
+  left: 50px;
 }
