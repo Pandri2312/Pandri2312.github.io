@@ -1,13 +1,13 @@
 .corazon {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100px;
   height: 100px;
   background-color: red;
-  /* Rotamos el cuadro para que la punta quede hacia abajo */
-  transform: rotate(-45deg); 
-  margin: 50px auto;
+  /* Lo rotamos y lo centramos matemáticamente */
+  transform: translate(-50%, -50%) rotate(-45deg); 
 }
-
 /* Con ::before y ::after creamos los dos círculos de arriba */
 .corazon::before,
 .corazon::after {
