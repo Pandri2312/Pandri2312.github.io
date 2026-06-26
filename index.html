@@ -4,7 +4,45 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Colored boxes example</title>
-    <link rel="stylesheet" href="./styles.css" />
+    
+    <style>
+      body {
+        background-color: #f0f0f0; /* Un fondo gris claro para que resalte */
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .corazon {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transform: rotate(-45deg); 
+      }
+
+      .corazon::before,
+      .corazon::after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50%; 
+      }
+
+      .corazon::before {
+        top: -50px;
+        left: 0;
+      }
+
+      .corazon::after {
+        top: 0;
+        left: 50px;
+      }
+    </style>
   </head>
   <body>
 
